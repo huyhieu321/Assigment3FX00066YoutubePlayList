@@ -46,7 +46,7 @@ public class SignUpActivity extends AppCompatActivity {
                     if (isPasswordMatch(password, confirmPassword)) {
                         // check userName not exist before
                         if (helper.isCheckUserExist(userName)) {
-                            Toast.makeText(SignUpActivity.this, userName + "Already registered , please use another name", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, userName + " already registered , please use another name", Toast.LENGTH_SHORT).show();
                         }
                         else{
                             helper.addUser(userName, password);
