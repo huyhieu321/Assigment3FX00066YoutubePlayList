@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke android:width="@dimen/textSize" android:color="@color/btnSignColor"/>
+    <corners android:radius="@dimen/marginElement"/>
+    <solid android:color="@color/btnSignColor"/>
+</shape>
