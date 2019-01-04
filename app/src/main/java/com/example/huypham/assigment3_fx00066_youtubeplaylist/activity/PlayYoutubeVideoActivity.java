@@ -1,5 +1,6 @@
 package com.example.huypham.assigment3_fx00066_youtubeplaylist.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -47,5 +48,16 @@ public class PlayYoutubeVideoActivity extends YouTubeBaseActivity implements OnI
     public void onInitializationFailure(Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
         String error = "Không thể load video! Kiểm tra Internet và ứng dụng Youtube trên máy của bạn!";
         Toast.makeText(this, error, Toast.LENGTH_LONG).show();
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+        }
     }
 }
